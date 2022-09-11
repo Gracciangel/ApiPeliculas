@@ -1,0 +1,44 @@
+.header{
+    ul{
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-around;
+        align-items: center;
+        li{
+            list-style-type: none;
+            button{
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+            img{
+                cursor: pointer;
+            }
+            
+        }
+
+    }
+}
+.offcanvas-body{
+    .menu{
+        margin-left: -9%;
+        li{
+            margin-top: 0;
+            margin-bottom: 1rem;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+        .menu-item{
+            text-decoration: none;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            transition: .2s;
+            &:hover{
+               border-bottom: grey 1px solid;
+            }
+        }
+    }
+    }
+}

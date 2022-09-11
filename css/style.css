@@ -1,0 +1,158 @@
+* {
+  padding: 0%;
+  margin: 0%; }
+
+html {
+  size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200; }
+
+.dark {
+  background-color: black;
+  color: white;
+  border: none; }
+
+.light {
+  background: linear-gradient(7deg, #2A8C82, #41BFB3, #9BF2EA, #275950, #260101);
+  color: rgba(0, 0, 0, 0.568);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.estilos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 20% 40%;
+  text-align: center; }
+  .estilos h1 {
+    text-shadow: 0px 0px 0px 12px red; }
+  .estilos a {
+    text-decoration: none;
+    text-align: center;
+    padding-top: .5rem;
+    transition: .3s;
+    color: white; }
+    .estilos a:hover {
+      transform: scale(1.05);
+      color: green; }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10% 30%; }
+  .form .titleForm {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid gray; }
+  .form .nombre {
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: .4rem;
+    transition: .5s; }
+    .form .nombre:focus {
+      box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
+      background-color: transparent; }
+  .form .email {
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: .4rem;
+    transition: .5s; }
+    .form .email:focus {
+      box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
+      background-color: transparent; }
+  .form .password {
+    border: none;
+    padding: 1rem;
+    text-align: center; }
+    .form .password:focus {
+      box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
+      background-color: transparent; }
+  .form .enviar {
+    margin: 7% 30%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 255, 0.356);
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+    font: 800; }
+    .form .enviar:hover {
+      transform: scale(1.04);
+      background-color: rgba(0, 255, 0, 0.356);
+      color: black; }
+  .form .fotForm a {
+    color: #2a4c47;
+    text-decoration: none;
+    transition: .5s; }
+    .form .fotForm a:hover {
+      color: black; }
+
+.header ul {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  align-items: center; }
+  .header ul li {
+    list-style-type: none; }
+    .header ul li button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer; }
+    .header ul li img {
+      cursor: pointer; }
+
+.offcanvas-body .menu {
+  margin-left: -9%; }
+  .offcanvas-body .menu li {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; }
+    .offcanvas-body .menu li .menu-item {
+      text-decoration: none;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      transition: .2s; }
+      .offcanvas-body .menu li .menu-item:hover {
+        border-bottom: grey 1px solid; }
+
+.gridPeliculas {
+  margin: 1rem 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem; }
+  .gridPeliculas .flexPrint {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .gridPeliculas .flexPrint .titleArray {
+      font-size: 15px;
+      margin-top: 5%;
+      margin-right: 10%; }
+  .gridPeliculas .imgPath {
+    width: 150px;
+    height: 200px;
+    transition: .5s; }
+    .gridPeliculas .imgPath:hover {
+      cursor: pointer;
+      transform: scale(1.06); }
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  background-color: black; }
+
+@media (max-width: 760px) {
+  #peliculas {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; } }

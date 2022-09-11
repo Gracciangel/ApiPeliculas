@@ -1,0 +1,44 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    
+}
+html{
+    size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+.dark{
+    background-color: black;
+    color: white;
+    border: none;
+}
+.light{
+    background: linear-gradient(7deg,#2A8C82, #41BFB3,#9BF2EA,#275950, #260101);
+    color: rgba(0, 0, 0, 0.568);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.estilos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20% 40%;
+    text-align: center;
+    h1{
+        text-shadow: 0px 0px 0px 12px red;
+    }
+    a{
+        text-decoration: none;
+        text-align: center;
+        padding-top: .5rem;
+        transition: .3s;
+        color: white;
+        &:hover{
+            transform: scale(1.05);
+            color: green;
+        }
+    }
+ 
+}

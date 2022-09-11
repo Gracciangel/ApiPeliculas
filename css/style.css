@@ -153,6 +153,6 @@ html {
 
 @media (max-width: 760px) {
   #peliculas {
-    margin: auto;
+    margin: 2rem 15%;
     display: flex;
     flex-wrap: wrap; } }

@@ -31,7 +31,7 @@ function crearCuenta(){
         let emailUsuario= email.value; 
         let passwordUsuario = password.value; 
         let user = new usuario (1 , emailUsuario ,nombreUsuairo, passwordUsuario)
-        sessionStorage.setItem('usuario', JSON.stringify(user))
+        localStorage.setItem('usuario', JSON.stringify(user))
         if(nombreUsuairo !='' && emailUsuario!='' && passwordUsuario!=''){
             body.style.transition='1s'; 
             body.classList.remove('light');

@@ -1,7 +1,7 @@
 
 const listaDeusuairos=[];  
 
-let user = sessionStorage.getItem('usuario')
+let user = localStorage.getItem('usuario')
 let form= document.getElementById('formulario')
 let submit = document.getElementById('enviar')
 let email= document.getElementById('email')
@@ -10,7 +10,7 @@ let body = document.getElementById('body')
 function crearCuenta(){
     submit.onclick=(e)=>{
         e.preventDefault()
-        let user = sessionStorage.getItem('usuario')
+        let user = localStorage.getItem('usuario')
         let userLogin = JSON.parse(user); 
         let form= document.getElementById('formulario')
         let password = document.getElementById('password')

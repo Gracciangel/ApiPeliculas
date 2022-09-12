@@ -1,7 +1,13 @@
 
 
+
+
+
+
+
+
 // control del DOM
-let avatar =document.getElementById('avatarDefault')
+let avatar =document.getElementById('btnAvatar')
 const offcanvas = document.getElementById('bodyOffcanvas')
 const peliculasApi = document.getElementById("peliculas");
 const action = document.getElementById("accion");
@@ -15,6 +21,8 @@ let btnSearch = document.getElementById('bt-buscar')
 
 // pagina
 let pagina = 1;
+
+let avatarUser = avatar.classList=localStorage.getItem('avatar')
 
 
 // funcionamientos de los botones de la paginación 
@@ -34,45 +42,60 @@ btnAnt.onclick = () => {
 }
 
 
-// funciones
 
 
-function avatares(){
-  
-  avatar.onclick=()=>{
-    offcanvas.innerHTML=
-    `
-    <div class="avatares">
-    
-    <img src="../images&videos/avatar1.png" alt="" class="avatar avatar1" id="avatar1">
-    <img src="../images&videos/avatar2.png" alt="" class="avatar avatar2" id="avatar2">
-    <img src="../images&videos/avatar3.png" alt="" class="avatar avatar3" id="avatar3">
-    <img src="../images&videos/avatar4.png" alt="" class="avatar avatar4" id="avatar4">
-    
+avatar.addEventListener('click',()=>{
+  offcanvas.innerHTML=`
+  <div class="avatares">
+  <img class="avatar1 avatar" src="../images&videos/avatar1.png" id="avatar1" alt="">
+  <img class="avatar2 avatar" src="../images&videos/avatar2.png" id="avatar2" alt="">
+  <img class="avatar3 avatar" src="../images&videos/avatar3.png" id="avatar3" alt="">
+    <img class="avatar4 avatar" src="../images&videos/avatar4.png" id="avatar4" alt="">  
     </div
     `;
- let avatar1 = document.getElementById('avatar1'); 
- let avatar2 = document.getElementById('avatar2'); 
- let avatar3 = document.getElementById('avatar3'); 
- let avatar4 = document.getElementById('avatar4');
- 
- avatar1.onclick=()=>{
-  avatar.setAttribute('src' , '../images&videos/avatar1.png')
- 
- }
- avatar2.onclick=()=>{
-  avatar.setAttribute('src' , '../images&videos/avatar2.png')
- }
- avatar3.onclick=()=>{
-  avatar.setAttribute('src' , '../images&videos/avatar3.png')
- }
- avatar4.onclick=()=>{
-  avatar.setAttribute('src' , '../images&videos/avatar4.png')
- }
-  }
-  }
-
-const peli = () => {
+    
+    let avt1 = document.getElementById('avatar1')
+    avt1.onclick=()=>{
+      if(avatarUser){
+        avatar.classList.remove('avatar'); 
+        avatar.classList.add('avatar1'); 
+        localStorage.setItem('avatar', avatar.classList='avatar1')
+        
+      }
+    }
+    let avt2 =document.getElementById('avatar2')
+    avt2.onclick=()=>{
+      if(avatarUser){
+        avatar.classList.remove('avatar'); 
+        avatar.classList.add('avatar2'); 
+        localStorage.setItem('avatar', avatar.classList='avatar2')
+        
+      }
+    }
+    let avt3 =document.getElementById('avatar3')
+    avt3.onclick=()=>{
+      if(avatarUser){
+        avatar.classList.remove('avatar'); 
+        avatar.classList.add('avatar3'); 
+        localStorage.setItem('avatar', avatar.classList='avatar3')
+        
+      }
+    }
+    let avt4 =document.getElementById('avatar4') ;
+    avt4.onclick=()=>{
+      if(avatarUser){
+        avatar.classList.remove('avatar'); 
+        avatar.classList.add('avatar4'); 
+        localStorage.setItem('avatar', avatar.classList='avatar4')
+        
+      }
+    }
+  })
+  
+  // funciones
+  
+  
+  const peli = () => {
   // Get Api
   fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=aaf8812b1d1a70feeec14d75ddd78b5f&language=es-MX&page=${pagina}`
@@ -127,6 +150,6 @@ const peli = () => {
 
 // llamdo de funciones
 peli();
-avatares()
+
 
 

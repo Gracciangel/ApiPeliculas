@@ -17,7 +17,7 @@ let btnSearch = document.getElementById('bt-buscar')
 let pagina = 1;
 avatarDefault = localStorage.getItem('avatar') ;
 
-if(avatarDefault){
+if(avatarDefault==null){
   avatar.className=avatarDefault; 
 }
 

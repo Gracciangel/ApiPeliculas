@@ -33,9 +33,44 @@
   align-items: center;
   height: 80px;
   background-color: black;
-  
-      
 }
+.flayer{
+  display: grid;
+  grid-template-columns: repeat(4fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin: 2rem;
+  img{
+    grid-column: 1 / 2;
+    border-radius: 10%;
+
+  }
+  .parrafo{
+    margin: 2.5rem;
+    grid-column: 3 / 4 ;
+  }
+}
+.avatares{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  .avatar{
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+      &:hover{
+  
+        transform: rotate(20deg) scale((1.5));
+        cursor: pointer;
+      }
+  }
+}
+img{
+  width: 50px;
+  height: 50px;
+}
+
 
 @media(max-width:760px){
   #peliculas{

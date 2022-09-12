@@ -18,7 +18,7 @@ function crearCuenta(){
         let email= document.getElementById('email')
     if(userLogin.email === email.value && userLogin.password=== password.value){
         alert(`bienvenido ${userLogin.nombre}`)  
-       location.href='/pages/paginaUsuario.html'
+       location.href='paginaUsuario.html'
     }else{
         alert('ERROR')
     }

@@ -13,21 +13,18 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!--menu usuario  -->
-            <a class="avatar" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-               <img src="../images&videos/usuario.png" alt="" id="avatar">
+            <a class="anchorAvatar" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+               <img src="../images&videos/usuario.png" alt="" id="avatarDefault" class="avatar">
               </a>
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
                   <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="offcanvas-body">
-                      
+                <div class="offcanvas-body" id="bodyOffcanvas">
+                 
                     <ul class="menu" aria-labelledby="dropdownMenuButton">
-                        <li><a id="accion" class="menu-item" href="#">Accion</a></li>
-                        <li><a id="aventura" class="menu-item" href="#">Aventura</a></li>
-                        <li><a id="nacionales" class="menu-item" href="#">Nacionales</a></li>
-                        <li><a id="comedias" class="menu-item" href="#">Comedias</a></li>
+                        
                       </ul>
                   <div>
                     </div>
@@ -72,15 +69,15 @@
             </div>
            <div class="buttons" id="buttons">
              <button class="btnAnt" id="btnAnt">Anterior</button>
-                  <div id="numeroDePagina"></div>
+                  <div id="numeroDePagina">1</div>
              <button class="btnSig" id="btnSig">Proximo</button>
            </div>
         
 <!-- scripts -->  
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../scripts/vistaUsuario.js"></script>
     <script src="../scripts/header.js"></script>
+    <script src="../scripts/vistaUsuario.js"></script>
 </body>
 </html>
 

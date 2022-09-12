@@ -151,6 +151,36 @@ html {
   height: 80px;
   background-color: black; }
 
+.flayer {
+  display: grid;
+  grid-template-columns: repeat(4fr);
+  grid-template-rows: 1fr;
+  align-items: center;
+  margin: 2rem; }
+  .flayer img {
+    grid-column: 1 / 2;
+    border-radius: 10%; }
+  .flayer .parrafo {
+    margin: 2.5rem;
+    grid-column: 3 / 4; }
+
+.avatares {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem; }
+  .avatares .avatar {
+    width: 50px;
+    height: 50px;
+    transition: .5s; }
+    .avatares .avatar:hover {
+      transform: rotate(20deg) scale(1.5);
+      cursor: pointer; }
+
+img {
+  width: 50px;
+  height: 50px; }
+
 @media (max-width: 760px) {
   #peliculas {
     margin: 2rem 15%;

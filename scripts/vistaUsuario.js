@@ -1,11 +1,5 @@
 
 
-
-
-
-
-
-
 // control del DOM
 let avatar =document.getElementById('btnAvatar')
 const offcanvas = document.getElementById('bodyOffcanvas')
@@ -21,8 +15,11 @@ let btnSearch = document.getElementById('bt-buscar')
 
 // pagina
 let pagina = 1;
+avatarDefault = localStorage.getItem('avatar') ;
 
-let avatarUser = avatar.classList=localStorage.getItem('avatar')
+if(avatarDefault){
+  avatar.className=avatarDefault; 
+}
 
 
 // funcionamientos de los botones de la paginación 
@@ -56,39 +53,43 @@ avatar.addEventListener('click',()=>{
     
     let avt1 = document.getElementById('avatar1')
     avt1.onclick=()=>{
-      if(avatarUser){
+      if(avatarDefault){
         avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar1'); 
-        localStorage.setItem('avatar', avatar.classList='avatar1')
-        
+        avatar.classList.add('avatar1')
+        avatarDefault='avatar1'
+        console.log(avatarDefault)
       }
+      localStorage.setItem('avatar', avatarDefault)
     }
-    let avt2 =document.getElementById('avatar2')
+    let avt2 = document.getElementById('avatar2'); 
     avt2.onclick=()=>{
-      if(avatarUser){
+      if(avatarDefault){
         avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar2'); 
-        localStorage.setItem('avatar', avatar.classList='avatar2')
-        
+        avatar.classList.add('avatar2')
+        avatarDefault='avatar2'
+        console.log(avatarDefault)
       }
+      localStorage.setItem('avatar', avatarDefault)
     }
-    let avt3 =document.getElementById('avatar3')
+    let avt3 = document.getElementById('avatar3') ;
     avt3.onclick=()=>{
-      if(avatarUser){
+      if(avatarDefault){
         avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar3'); 
-        localStorage.setItem('avatar', avatar.classList='avatar3')
-        
+        avatar.classList.add('avatar3')
+        avatarDefault='avatar3'
+        console.log(avatarDefault)
       }
+      localStorage.setItem('avatar', avatarDefault)
     }
-    let avt4 =document.getElementById('avatar4') ;
+    let avt4 = document.getElementById('avatar4') ;
     avt4.onclick=()=>{
-      if(avatarUser){
+      if(avatarDefault){
         avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar4'); 
-        localStorage.setItem('avatar', avatar.classList='avatar4')
-        
+        avatar.classList.add('avatar4')
+        avatarDefault='avatar4'
+        console.log(avatarDefault)
       }
+      localStorage.setItem('avatar', avatarDefault)
     }
   })
   

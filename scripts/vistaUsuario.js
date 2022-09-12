@@ -1,7 +1,7 @@
 
 
 // control del DOM
-let avatar =document.getElementById('btnAvatar')
+let avatar = document.getElementById('btnAvatar')
 const offcanvas = document.getElementById('bodyOffcanvas')
 const peliculasApi = document.getElementById("peliculas");
 const action = document.getElementById("accion");
@@ -15,15 +15,8 @@ let btnSearch = document.getElementById('bt-buscar')
 
 // pagina
 let pagina = 1;
-avatarDefault = localStorage.getItem('avatar') ;
-
-if(avatarDefault==null){
-  avatar.className=avatarDefault; 
-}
-
 
 // funcionamientos de los botones de la paginación 
-
 
 btnSig.onclick = () => {
   pagina < 1000 ? pagina += 1 : console.loig('no se puede acceder a la página')
@@ -38,60 +31,42 @@ btnAnt.onclick = () => {
   peli()
 }
 
+// control de los avatar
+    avatar.className='avatar'; 
 
+    if(avatar){
+      avatar.className=localStorage.getItem('avatar')
+    }
 
-
-avatar.addEventListener('click',()=>{
-  offcanvas.innerHTML=`
-  <div class="avatares">
-  <img class="avatar1 avatar" src="../images&videos/avatar1.png" id="avatar1" alt="">
-  <img class="avatar2 avatar" src="../images&videos/avatar2.png" id="avatar2" alt="">
-  <img class="avatar3 avatar" src="../images&videos/avatar3.png" id="avatar3" alt="">
-    <img class="avatar4 avatar" src="../images&videos/avatar4.png" id="avatar4" alt="">  
-    </div
-    `;
-    
-    let avt1 = document.getElementById('avatar1')
+    let avt1 = document.getElementById('avatar1'); 
     avt1.onclick=()=>{
-      if(avatarDefault){
-        avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar1')
-        avatarDefault='avatar1'
-        console.log(avatarDefault)
-      }
-      localStorage.setItem('avatar', avatarDefault)
+      avatar.className.remove=avatar; 
+      avatar.className='avatar1'
+      localStorage.setItem('avatar', avatar.className)
     }
-    let avt2 = document.getElementById('avatar2'); 
+
+    let avt2= document.getElementById('avatar2') ;
     avt2.onclick=()=>{
-      if(avatarDefault){
-        avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar2')
-        avatarDefault='avatar2'
-        console.log(avatarDefault)
-      }
-      localStorage.setItem('avatar', avatarDefault)
-    }
-    let avt3 = document.getElementById('avatar3') ;
+     avatar.className.remove=avatar
+      avatar.className ='avatar2' ;
+      localStorage.setItem('avatar', avatar.className)
+    } 
+
+    let avt3 = document.getElementById('avatar3'); 
     avt3.onclick=()=>{
-      if(avatarDefault){
-        avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar3')
-        avatarDefault='avatar3'
-        console.log(avatarDefault)
-      }
-      localStorage.setItem('avatar', avatarDefault)
+      avatar.className.remove=avatar
+      avatar.className='avatar3';
+      localStorage.setItem('avatar', avatar.className)
     }
-    let avt4 = document.getElementById('avatar4') ;
+    
+    let avt4 = document.getElementById('avatar4'); 
     avt4.onclick=()=>{
-      if(avatarDefault){
-        avatar.classList.remove('avatar'); 
-        avatar.classList.add('avatar4')
-        avatarDefault='avatar4'
-        console.log(avatarDefault)
-      }
-      localStorage.setItem('avatar', avatarDefault)
+      avatar.className.remove=avatar
+      avatar.className='avatar4'; 
+      localStorage.setItem('avatar', avatar.className)
     }
-  })
+
+
   
   // funciones
   

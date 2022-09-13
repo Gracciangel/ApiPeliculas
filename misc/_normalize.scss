@@ -8,18 +8,8 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
 }
-.dark{
-    background-color: black;
-    color: white;
-    border: none;
-}
-.light{
-    background: linear-gradient(7deg,#2A8C82, #41BFB3,#9BF2EA,#275950, #260101);
-    color: rgba(0, 0, 0, 0.568);
-    background-size: cover;
-    background-repeat: no-repeat;
 
-}
+
 .estilos{
     display: flex;
     flex-direction: column;

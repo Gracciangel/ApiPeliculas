@@ -66,3 +66,26 @@
         }
     }
 }
+@media(max-width:760px){
+    body{
+        background: linear-gradient(30deg, #DAFF59, #E657D6,#66F05B);
+    }
+    .form{
+        display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    .titleForm{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .strong{
+            margin-bottom: .5rem;
+            background: linear-gradient(50deg , #FF8475,#A333DE,#448EF5,#4AE095,#DAFF59);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+    }
+    }

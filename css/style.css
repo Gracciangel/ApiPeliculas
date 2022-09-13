@@ -7,17 +7,6 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200; }
 
-.dark {
-  background-color: black;
-  color: white;
-  border: none; }
-
-.light {
-  background: linear-gradient(7deg, #2A8C82, #41BFB3, #9BF2EA, #275950, #260101);
-  color: rgba(0, 0, 0, 0.568);
-  background-size: cover;
-  background-repeat: no-repeat; }
-
 .estilos {
   display: flex;
   flex-direction: column;
@@ -89,6 +78,25 @@ html {
     .form .fotForm a:hover {
       color: black; }
 
+@media (max-width: 760px) {
+  body {
+    background: linear-gradient(30deg, #DAFF59, #E657D6, #66F05B); }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center; }
+    .form .titleForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; }
+      .form .titleForm .strong {
+        margin-bottom: .5rem;
+        background: linear-gradient(50deg, #FF8475, #A333DE, #448EF5, #4AE095, #DAFF59);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text; } }
+
 .header ul {
   margin-top: 1rem;
   display: flex;
@@ -123,6 +131,11 @@ html {
 
 body {
   background-color: rgba(0, 0, 0, 0.925); }
+
+.navbar {
+  padding-bottom: 2rem; }
+  .navbar .container-fluid {
+    margin-top: 1rem; }
 
 .gridPeliculas {
   margin: 1rem 10%;
@@ -180,15 +193,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem; }
+  gap: 1rem;
+  margin-left: 2rem; }
   .avatares .divMode {
     display: flex;
     justify-content: flex-end;
     margin-right: 12%;
     margin-bottom: 3rem; }
   .avatares .avatar {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     transition: .5s; }
     .avatares .avatar:hover {
       transform: rotate(20deg) scale(1.5);
@@ -202,21 +216,19 @@ img {
   background-image: url(../images&videos/sun.png);
   border: none;
   background-color: black;
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
+  margin-top: 1rem;
   transition: .5s; }
-  .btnDark:hover {
-    transform: scale(1.03); }
 
 .btnLight {
   background: transparent;
   border: none;
   background-image: url(../images&videos/night-mode.png);
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
+  margin-top: 1rem;
   transition: .5s; }
-  .btnLight:hover {
-    transform: scale(1.03); }
 
 .dark {
   background-color: black;

@@ -1,11 +1,11 @@
 
-const listaDeusuairos=[];  
 
 let user = localStorage.getItem('usuario')
 let form= document.getElementById('formulario')
 let submit = document.getElementById('enviar')
 let email= document.getElementById('email')
 let body = document.getElementById('body')
+
 
 function crearCuenta(){
     submit.onclick=(e)=>{
@@ -17,8 +17,12 @@ function crearCuenta(){
         let submit = document.getElementById('enviar')
         let email= document.getElementById('email')
     if(userLogin.email === email.value && userLogin.password=== password.value && userLogin.email!='' && userLogin.password!=''){
-        alert(`bienvenido ${userLogin.nombre}`)  
-       location.href='paginaUsuario.html'
+        Swal.fire({
+            icon: 'succes',
+            title: `${userLogin.nombre}`,
+            text: 'gracias por crear tu cuenta... A continuacion puedes ingresar',
+        })   
+        location.href='paginaUsuario.html'
     }else{
         Swal.fire({
             icon: 'error',

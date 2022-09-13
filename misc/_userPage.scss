@@ -137,6 +137,25 @@ img{
   background-repeat: no-repeat;
   max-width: 100%;
 }
+.swal-button{
+  background-color:#AAEB59;
+  color:#D95671 ;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  border: none;
+  transition: .5s;
+  &:hover{
+    box-shadow: 0px 0px 100px 2px black;
+    cursor: pointer;
+  }
+  a{
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s;
+  
+  }
+}
 @media(max-width:760px){
   #peliculas{
     margin: 2rem 15%;

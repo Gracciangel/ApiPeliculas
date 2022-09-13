@@ -39,7 +39,7 @@ function crearCuenta(){
                 icon: 'error',
                 title: 'Oops...',
                 text: 'debes completar los campos',
-              })   
+              })
     
         }
             

@@ -33,33 +33,17 @@ function crearCuenta(){
         let user = new usuario (1 , emailUsuario ,nombreUsuairo, passwordUsuario)
         localStorage.setItem('usuario', JSON.stringify(user))
         if(nombreUsuairo !='' && emailUsuario!='' && passwordUsuario!=''){
-            body.style.transition='1s'; 
-            body.classList.remove('light');
-            body.classList.add('dark')
-            body.innerHTML=`
-                    
-                <div id="div">
-                <h1 class="nombreUsuario">${nombreUsuairo}</<h1>
-                <h2>Te damos la bienvenida a Sillon</h2>
-                <h2>Gracias por crear tu cuenta</h2>
-                <a href="./pages/login.html" id="enlace">Accedé a tu cuenta</a>
-                </div>
-            ` ;
-                estilos()
+       location.href='../pages/login.html'
         }else{
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
                 text: 'debes completar los campos',
-              })
-        }
-    }   
+              })   
     
-}
-function estilos(){
-    body.classList.remove('light')
-    body.classList.add('fondoBienvenida')
-    let div= document.getElementById('div')
-    div.classList.add('estilos')
-
+        }
+            
+        
+           
+    }
 }

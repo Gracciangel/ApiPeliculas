@@ -124,8 +124,53 @@ btnAnt.onclick = () => {
 
 };
 
+
+// modo vista de usuario
+
+// control de dom para acceso a configuracion de botones y estilos
+
+let btnMode = document.getElementById('btnMode')
+let body = document.getElementById('body'); 
+let bodyOff = document.getElementById('bodyOffcanvas');
+let headerOff = document.getElementById('offHeader')
+btnMode.className='btnLight'
+let modo ='light';
+if(modo){
+  modo = localStorage.getItem('modo')
+  body.className=localStorage.getItem('btnMode')
+  bodyOff.className=localStorage.getItem('bodyOff')
+
+}
+
+const modoUsuario=()=>{
+  btnMode.onclick=()=>{
+    if(modo =='light'){
+      modo='dark'
+      body.className='dark'
+     let bM= btnMode.classList='btnDark'; 
+      let bOff =bodyOff.style.background='black'
+      localStorage.setItem('modo', modo)
+      localStorage.setItem('bodyOff', bOff)
+      localStorage.setItem('btnMode', bM)
+     }
+     else{
+      modo='light'
+      body.className='light'
+      let bM = btnMode.className='btnLight'
+      let bOff = bodyOff.style.background='white'
+      localStorage.setItem('modo', modo)
+      localStorage.setItem('bodyOff', bOff)
+      localStorage.setItem('btnMode', bM)
+    }
+  }
+
+}
+
+
+
+
+
 // llamdo de funciones
 peli();
-
 
 

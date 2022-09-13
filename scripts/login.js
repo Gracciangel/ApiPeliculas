@@ -16,12 +16,18 @@ function crearCuenta(){
         let password = document.getElementById('password')
         let submit = document.getElementById('enviar')
         let email= document.getElementById('email')
-    if(userLogin.email === email.value && userLogin.password=== password.value){
+    if(userLogin.email === email.value && userLogin.password=== password.value && userLogin.email!='' && userLogin.password!=''){
         alert(`bienvenido ${userLogin.nombre}`)  
        location.href='paginaUsuario.html'
     }else{
-        alert('ERROR')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'debes completar los campos',
+          })   
+    
+  
     }
-    }
+}
 }
 crearCuenta()

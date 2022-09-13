@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body id="body" class="light">
     <!-- menu Boostrap -->
    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,12 +18,18 @@
                <div class="avatar" id="btnAvatar"></div>
               </a>
               <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <div class="offcanvas-header" id="offHeader">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="close"></button>
                 </div>
-                <div class="offcanvas-body" id="bodyOffcanvas">
+           
+
+                <div class="offcanvas-body" 
+                id="bodyOffcanvas">
                   <div class="avatares">
+                    <div class="divMode">
+                      <button class="btnLight" id="btnMode"></button>
+                    </div>
                     <img class="avatar1 avatar" src="../images&videos/avatar1.png" id="avatar1" alt="">
                     <img class="avatar2 avatar" src="../images&videos/avatar2.png" id="avatar2" alt="">
                     <img class="avatar3 avatar" src="../images&videos/avatar3.png" id="avatar3" alt="">
@@ -34,7 +40,7 @@
                       </ul>
                   <div>
                     </div>
-                </div>ñ
+                </div>
               </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,15 +74,15 @@
           </div>
         </div>
       </nav>
-      <!-- titulo principal  -->
-        <h1 class="title">Lo mas visto</h1>
+              <!-- seccion principal -->
+
 
             <div id="peliculas" class="gridPeliculas">
             </div>
            <div class="buttons" id="buttons">
-             <button class="btnAnt" id="btnAnt">Anterior</button>
+             <button class="btnController" id="btnAnt">Anterior</button>
                   <div id="numeroDePagina">1</div>
-             <button class="btnSig" id="btnSig">Proximo</button>
+             <button class="btnController" id="btnSig">Proximo</button>
            </div>
         
 <!-- scripts -->  

@@ -7,6 +7,23 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200; }
 
+.dark {
+  background: rgba(0, 0, 0, 0.801);
+  color: whitesmoke; }
+
+.light {
+  background: whitesmoke; }
+  .light .gridPeliculas .imgPath {
+    opacity: 100%; }
+    .light .gridPeliculas .imgPath:hover {
+      box-shadow: 0px 0px 123px 12px black;
+      opacity: 50%; }
+
+.capaDeAvatar {
+  width: 80px;
+  height: 80px;
+  position: absolute; }
+
 .estilos {
   display: flex;
   flex-direction: column;
@@ -29,7 +46,10 @@ html {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10% 30%; }
+  margin-top: 5%;
+  margin-left: 60%;
+  margin-right: 15%;
+  color: white; }
   .form .titleForm {
     margin-bottom: 2rem;
     border-bottom: 1px solid gray; }
@@ -38,26 +58,33 @@ html {
     padding: 1rem;
     text-align: center;
     margin-bottom: .4rem;
-    transition: .5s; }
+    transition: .5s;
+    color: black; }
     .form .nombre:focus {
       box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
-      background-color: transparent; }
+      background-color: transparent;
+      color: white;
+      border: none 0px; }
   .form .email {
     border: none;
     padding: 1rem;
     text-align: center;
     margin-bottom: .4rem;
-    transition: .5s; }
+    transition: .5s;
+    color: black; }
     .form .email:focus {
       box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
-      background-color: transparent; }
+      background-color: transparent;
+      color: white; }
   .form .password {
     border: none;
     padding: 1rem;
-    text-align: center; }
+    text-align: center;
+    color: black; }
     .form .password:focus {
       box-shadow: 0px 0px 14px 10px rgba(0, 0, 255, 0.356);
-      background-color: transparent; }
+      background-color: transparent;
+      color: white; }
   .form .enviar {
     margin: 7% 30%;
     padding: 1rem;
@@ -72,15 +99,18 @@ html {
       background-color: rgba(0, 255, 0, 0.356);
       color: black; }
   .form .fotForm a {
-    color: #2a4c47;
+    color: #03f3cf;
     text-decoration: none;
     transition: .5s; }
     .form .fotForm a:hover {
       color: black; }
 
+body {
+  background-image: url(../images&videos/background.jpg); }
+
 @media (max-width: 760px) {
   body {
-    background: linear-gradient(30deg, #DAFF59, #E657D6, #66F05B); }
+    background-image: url(../images&videos/mobile-background.jpg); }
   .form {
     display: flex;
     flex-direction: column;
@@ -130,7 +160,9 @@ html {
         border-bottom: grey 1px solid; }
 
 body {
-  background-color: rgba(0, 0, 0, 0.925); }
+  background-image: url(../images&videos/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .navbar {
   padding-bottom: 2rem; }
@@ -201,16 +233,16 @@ body {
     margin-right: 12%;
     margin-bottom: 3rem; }
   .avatares .avatar {
-    width: 52px;
-    height: 52px;
-    transition: .5s; }
+    width: 80px;
+    height: 80px;
+    transition: .8s; }
     .avatares .avatar:hover {
-      transform: rotate(20deg) scale(1.5);
+      transform: rotate(-10deg) scale(1.5);
       cursor: pointer; }
 
 img {
-  width: 50px;
-  height: 50px; }
+  width: 100px;
+  height: 100px; }
 
 .btnDark {
   background-image: url(../images&videos/sun.png);
@@ -230,20 +262,6 @@ img {
   margin-top: 1rem;
   transition: .5s; }
 
-.dark {
-  background-color: black;
-  color: whitesmoke; }
-
-.light {
-  background-color: whitesmoke;
-  color: black; }
-
-.sillonBackground {
-  background-image: url(../images&videos/sillon1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%; }
-
 .swal-button {
   background-color: #AAEB59;
   color: #D95671;
@@ -253,18 +271,55 @@ img {
   border: none;
   transition: .5s; }
   .swal-button:hover {
-    box-shadow: 0px 0px 100px 2px black;
     cursor: pointer; }
   .swal-button a {
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s; }
 
-@media (max-width: 760px) {
+@media (max-width: 400px) {
   #peliculas {
     margin: 2rem 15%;
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+  body {
+    background-image: url(../images&videos/mobile-background.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: -3rem;
+    position: absolute;
+    margin-left: 15%; }
+    .form .titleForm {
+      display: none; }
+  .capaDeAvatar {
+    width: 98px;
+    height: 100px;
+    margin-top: -198px; } }
+
+@media (max-width: 350px) {
+  #peliculas {
+    margin: 2rem 15%;
+    display: flex;
+    flex-wrap: wrap; }
+  body {
+    background-image: url(../images&videos/mobile-background.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 6rem;
+    position: absolute;
+    margin-left: 15%; }
+    .form .titleForm {
+      display: none; } }
 
 .avatar {
   width: 50px;
@@ -272,21 +327,16 @@ img {
   background-image: url(../images&videos/usuario.png); }
 
 .avatar1 {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 71px;
   background-image: url(../images&videos/avatar1.png); }
 
 .avatar2 {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 71px;
   background-image: url(../images&videos/avatar2.png); }
 
-.avatar3 {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images&videos/avatar3.png); }
-
-.avatar4 {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images&videos/avatar4.png); }
+.dropdown-menu img:hover {
+  cursor: pointer;
+  transition: .5s;
+  transform: scale(1.4); }

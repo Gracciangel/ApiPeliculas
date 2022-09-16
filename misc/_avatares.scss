@@ -5,25 +5,22 @@
 }
 
 .avatar1{   
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 71px;
     background-image: url(../images&videos/avatar1.png);
 }
 
 .avatar2{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 71px;
     background-image: url(../images&videos/avatar2.png);
 }
 
-.avatar3{
-    width: 50px;
-    height: 50px;
-    background-image: url(../images&videos/avatar3.png);
-}
 
-.avatar4{
-    width: 50px;
-    height: 50px;
-    background-image: url(../images&videos/avatar4.png);
+.dropdown-menu{
+        img:hover{
+            cursor: pointer;
+            transition: .5s;
+            transform: scale(1.4);
+        }
 }

@@ -9,6 +9,7 @@ class usuario{
 }
 
 // controlador del FORMULARIO 
+let avatarTitle = document.getElementById('avatarTitle')
 let body = document.getElementById('body')
 let formulario = document.getElementById('formulario') ; 
 let email= document.getElementById('email') ; 
@@ -18,7 +19,7 @@ let submit= document.getElementById('enviar')
 
 // LLAMADAS A FUNCIONES
 
-crearCuenta()   
+  
 
 // FUNCIONES
 
@@ -27,13 +28,16 @@ crearCuenta()
 function crearCuenta(){
     submit.onclick=(e)=>{
         e.preventDefault()
-        let nombreUsuairo=nombre.value
+        let nombreUsuairo= nombre.value ;
         let emailUsuario= email.value; 
         let passwordUsuario = password.value; 
         let user = new usuario (1 , emailUsuario ,nombreUsuairo, passwordUsuario)
-        localStorage.setItem('usuario', JSON.stringify(user))
+      
+        sessionStorage.setItem('usuario', JSON.stringify(user))
+        
         if(nombreUsuairo !='' && emailUsuario!='' && passwordUsuario!=''){
-       location.href='../pages/login.html'
+            location.href='../pages/login.html'
+            
         }else{
             Swal.fire({
                 icon: 'error',
@@ -47,3 +51,5 @@ function crearCuenta(){
            
     }
 }
+crearCuenta() 
+

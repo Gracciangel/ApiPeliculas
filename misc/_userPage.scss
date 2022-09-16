@@ -1,5 +1,8 @@
   body{
-  background-color: rgba(0, 0, 0, 0.925);
+  background-image: url(../images&videos/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 .navbar{
   padding-bottom: 2rem;
@@ -85,19 +88,19 @@
   
   }
   .avatar{
-    width: 52px;
-    height: 52px;
-    transition: .5s;
+    width: 80px;
+    height: 80px;
+    transition: .8s;
       &:hover{
   
-        transform: rotate(20deg) scale((1.5));
+        transform: rotate(-10deg) scale((1.5));
         cursor: pointer;
       }
   }
 }
 img{
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .btnDark{
@@ -122,21 +125,6 @@ img{
  
 }
 
-.dark{
-  background-color: black;
-  color: whitesmoke;
-}
-.light{
-  background-color: whitesmoke;
-  color: black;
-}
-
-.sillonBackground{
-  background-image: url(../images&videos/sillon1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 100%;
-}
 .swal-button{
   background-color:#AAEB59;
   color:#D95671 ;
@@ -146,8 +134,7 @@ img{
   border: none;
   transition: .5s;
   &:hover{
-    box-shadow: 0px 0px 100px 2px black;
-    cursor: pointer;
+      cursor: pointer;
   }
   a{
     text-decoration: none;
@@ -156,10 +143,63 @@ img{
   
   }
 }
-@media(max-width:760px){
+
+
+
+// mediaQueries
+
+@media(max-width:400px){
   #peliculas{
     margin: 2rem 15%;
     display: flex;
    flex-wrap: wrap;
+  }
+  body{
+    background-image: url(../images&videos/mobile-background.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: -3rem;
+    position: absolute;
+    margin-left: 15%;
+    .titleForm{
+      display: none;
+    }
+  }
+  .capaDeAvatar{
+    width: 98px;
+    height: 100px ;
+    margin-top: -198px;
+  }
+}
+
+
+@media(max-width:350px){
+  #peliculas{
+    margin: 2rem 15%;
+    display: flex;
+   flex-wrap: wrap;
+  }
+  body{
+    background-image: url(../images&videos/mobile-background.jpg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: 6rem;
+    position: absolute;
+    margin-left: 15%;
+    .titleForm{
+      display: none;
+    }
   }
 }
